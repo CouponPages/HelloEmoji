@@ -11,6 +11,13 @@ import UIKit
 class EmojiTableViewController: UITableViewController {
     
     var Emojis = ["😀", "💩", "🏎", "💒", "🎁", "🛎", "❤️", "🥑"]
+    var Titles = ["😀", "💩", "🏎", "💒", "🎁", "🛎", "❤️", "🥑"]
+    struct MyEmojis {
+        
+        var Symbol: String?
+        var Title: String?
+        
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
