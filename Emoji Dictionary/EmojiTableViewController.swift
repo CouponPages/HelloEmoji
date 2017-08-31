@@ -28,8 +28,9 @@ class EmojiTableViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print("Tapped!")
-        performSegue(withIdentifier: "MySeque", sender: nil)
+        // print("Tapped!")
+        let Emoji = Emojis[indexPath.row]
+        performSegue(withIdentifier: "MySeque", sender: Emoji)
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -38,6 +39,11 @@ class EmojiTableViewController: UITableViewController {
         cell.textLabel?.text = Emojis[indexPath.row]
         //,print(indexPath.row)
         return cell
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let EmojiDefVC = segue.destination as! EmojiDefinitionViewController
+        EmojiDefVC.Emoji = sender as! String
     }
 
 }
