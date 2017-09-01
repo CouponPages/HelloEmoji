@@ -9,8 +9,6 @@
 import Foundation
 class EmojiClass: NSObject
 {
-    
     var Symbol: String?
     var Title: String?
-    
 }

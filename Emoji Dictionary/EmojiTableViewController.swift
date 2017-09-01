@@ -9,8 +9,22 @@
 import UIKit
 class EmojiTableViewController: UITableViewController {
     
-    var Emojis = ["😀", "💩", "🏎", "💒", "🎁", "🛎", "❤️", "🥑"]
-    var Titles = ["😀", "💩", "🏎", "💒", "🎁", "🛎", "❤️", "🥑"]
+    var Emojis = ["😀",
+                  "💩",
+                  "🏎",
+                  "💒",
+                  "🎁",
+                  "🛎",
+                  "❤️",
+                  "🥑"]
+    var Titles = ["😀 - The Smley Face",
+                  "💩 - Poop (AKA Chocolate Ice Cream)",
+                  "🏎 - The Swift Race Car",
+                  "💒 - Church",
+                  "🎁 - A Gift!",
+                  "🛎 - You can Ring My Bell",
+                  "I ❤️ Emojis",
+                  "🥑 = Holy Guacamole!... It's an Avocado"]
     struct MyEmojis {
         
         var Symbol: String?
@@ -38,7 +52,7 @@ class EmojiTableViewController: UITableViewController {
         // let Emoji = Emojis[indexPath.row]
         let MyEmoji = EmojiClass()
         MyEmoji.Symbol = Emojis[indexPath.row]
-        MyEmoji.Title = Emojis[indexPath.row]
+        MyEmoji.Title = Titles[indexPath.row]
         
         performSegue(withIdentifier: "MySeque", sender: MyEmoji)
     }
