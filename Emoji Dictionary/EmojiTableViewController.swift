@@ -7,7 +7,6 @@
 //
 
 import UIKit
-
 class EmojiTableViewController: UITableViewController {
     
     var Emojis = ["😀", "💩", "🏎", "💒", "🎁", "🛎", "❤️", "🥑"]
@@ -36,8 +35,12 @@ class EmojiTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         // print("Tapped!")
-        let Emoji = Emojis[indexPath.row]
-        performSegue(withIdentifier: "MySeque", sender: Emoji)
+        // let Emoji = Emojis[indexPath.row]
+        let MyEmoji = EmojiClass()
+        MyEmoji.Symbol = Emojis[indexPath.row]
+        MyEmoji.Title = Emojis[indexPath.row]
+        
+        performSegue(withIdentifier: "MySeque", sender: MyEmoji)
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -48,9 +51,11 @@ class EmojiTableViewController: UITableViewController {
         return cell
     }
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    override func prepare(for segue: UIStoryboardSegue, sender: Any!) {
         let EmojiDefVC = segue.destination as! EmojiDefinitionViewController
-        EmojiDefVC.Emoji = sender as! String
+        
+        EmojiDefVC.ThisEmoji = sender as! EmojiClass
+        // EmojiDefVC.Emoji = (sender? as! EmojiClass).Symbol as! String
     }
 
 }
