@@ -72,4 +72,18 @@ class EmojiTableViewController: UITableViewController {
         // EmojiDefVC.Emoji = (sender? as! EmojiClass).Symbol as! String
     }
 
+    
+    // This function was created, but not used because Nick created a similar class method,
+    // but it's used differently, so I'm just following his example for training purposes.
+    func CreateEmojis() -> [EmojiClass]{
+        let Smiley = EmojiClass()
+        Smiley.BirthYear = 2012
+        Smiley.Category = "Food"
+        Smiley.Symbol = "🥑"
+        Smiley.Title = "Holy Guacamole!  It's an Avocado!"
+        
+        return [Smiley, Smiley, Smiley]
+    }
+    
+    
 }

@@ -14,6 +14,8 @@ class EmojiDefinitionViewController: UIViewController {
     var Title = ""
     var ThisEmoji = EmojiClass()
     
+    @IBOutlet weak var CategoryLabel: UILabel!
+    @IBOutlet weak var BirthLabel: UILabel!
     @IBOutlet weak var EmojiLabel: UILabel!
     @IBOutlet weak var EmojiDefinitionLabel: UILabel!
     override func viewDidLoad() {
@@ -21,7 +23,8 @@ class EmojiDefinitionViewController: UIViewController {
         //EmojiLabel.text = Emoji
         EmojiLabel.text = ThisEmoji.Symbol
         EmojiDefinitionLabel.text = ThisEmoji.Title
-        
+        BirthLabel.text = "Year \(ThisEmoji.BirthYear)"
+        CategoryLabel.text = ThisEmoji.Category
         print(Emoji)
         // Do any additional setup after loading the view.
     }

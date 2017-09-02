@@ -99,6 +99,8 @@
                         <viewLayoutGuide key="safeArea" id="F9s-Qe-t3B"/>
                     </view>
                     <connections>
+                        <outlet property="BirthLabel" destination="I0D-x7-8mE" id="nxc-1m-rs5"/>
+                        <outlet property="CategoryLabel" destination="b8h-LK-0B6" id="JuY-Gd-uGq"/>
                         <outlet property="EmojiDefinitionLabel" destination="ZH9-Ub-IDu" id="nml-Ns-kId"/>
                         <outlet property="EmojiLabel" destination="UnP-XM-iwN" id="08r-Cd-I8a"/>
                     </connections>

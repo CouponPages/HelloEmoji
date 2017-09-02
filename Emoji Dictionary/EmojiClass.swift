@@ -6,9 +6,11 @@
 //  Copyright © 2017 Joe Crescenzi. All rights reserved.
 //
 
-import Foundation
+import UIKit
 class EmojiClass: NSObject
 {
-    var Symbol: String?
-    var Title: String?
+    var Symbol = ""
+    var Title = ""
+    var BirthYear = 2017 // a default year
+    var Category =  "Default Category"
 }
